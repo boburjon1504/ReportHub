@@ -1,15 +1,11 @@
+using ReportHub.Api.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
-builder.Services.AddControllers();
+await builder.ConfigureAsync();
 
 var app = builder.Build();
 
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+await app.ConfigureAsync();
 
 app.Run();
