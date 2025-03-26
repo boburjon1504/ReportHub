@@ -25,4 +25,4 @@ jobs:
       - name: 🔨 Build solution
         run: dotnet build src/ReportHub.sln --configuration Release --no-restore
       - name: 🧪 Test solution
-        run: dotnet test src/ReportHub.sln --configuration Release --no-restore --no-build --logger "trx" --verbosity detailed
+        run: dotnet test src/ReportHub.sln --configuration Release --no-restore --no-build --logger:"console;verbosity=detailed"
